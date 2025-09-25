@@ -1,0 +1,115 @@
+body {
+    background: #f6f6f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.box {
+    background: #ddd;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.box .count {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.today {
+    background: #f33d73;
+}
+
+.scheduled {
+    background: #7d0f8b;
+}
+
+.all {
+    background: #4b86c5;
+}
+
+.completed {
+    background: #333;
+}
+
+.lists {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lists h2 {
+    margin: 0 0 15px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-buttons button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.add-task {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#add-btn {
+    padding: 10px 16px;
+    background: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background: #0061c2;
+}
+
+@media (max-width: 500px) {
+    .summary {
+        grid-template-columns: 1fr 1fr;
+    }
+}

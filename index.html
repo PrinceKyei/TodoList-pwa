@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Summary boxes -->
+    <section class="summary">
+        <div class="box today">
+            <span class="count" id="today-count">0</span>
+            <p>Today</p>
+        </div>
+        <div class="box scheduled">
+            <span class="count" id="scheduled-count">0</span>
+            <p>Scheduled</p>
+        </div>
+        <div class="box all">
+            <span class="count" id="all-count">0</span>
+            <p>All</p>
+        </div>
+        <div class="box completed">
+            <span class="count" id="completed-count">0</span>
+            <p>Completed</p>
+        </div>
+    </section>
+
+    <!-- My Lists -->
+    <section class="lists">
+        <h2>My Lists</h2>
+        <ul id="task-list"></ul>
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add to List…">
+            <button id="add-btn">Add</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+
+        }
+    </script>
+</body>
+
+</html>
