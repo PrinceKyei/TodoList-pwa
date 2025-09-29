@@ -36,14 +36,14 @@ function createTask(text) {
     };
 
     const edit = document.createElement('button');
-    edit.textContent = '✏';
+    edit.textContent = '✏️';
     edit.onclick = () => {
-        const newText = prompt('Edit reminder:', span.textContent);
+        const newText = prompt('Edit Task:', span.textContent);
         if (newText) span.textContent = newText;
     };
 
     const del = document.createElement('button');
-    del.textContent = '🗑';
+    del.textContent = '🗑️';
     del.onclick = () => {
         li.remove();
         updateCounts();
